@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top left, #ffdde1, #ee9ca7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 20px;
+  gap: 30px;
+  position: relative;
+  transition: all 1s ease;
+  /* transform: rotate(180deg); Used to rotate the entire page 180 degrees.*/  
+
+}
+
+.glow-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    #ff9a9e,
+    #fad0c4,
+    #fad0c4,
+    #ff9a9e
+  );
+  animation: spin 20s linear infinite;
+  z-index: -1;
+  filter: blur(120px);
+  opacity: 0.6;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  animation: fadeInZoom 1s ease forwards;
+  
+}
+
+/* Header */
+.main-header {
+  text-align: center;
+  animation: fadeInUp 1.5s ease;
+  
+}
+
+.main-header h1 {
+  font-size: 2.8rem;
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+
+}
+
+.main-header p {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+/* Card Sections */
+section {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s ease;
+  
+}
+
+section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.projects ul {
+  list-style: none;
+  padding: 0;
+}
+
+.projects li {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #222;
+}
+
+/* İletişim */
+.contact {
+  text-align: center;
+}
+
+.contact p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #222;
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(to right, #ff7eb3, #ff758c);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 120, 150, 0.4);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #444;
+  animation: fadeInUp 1.2s ease;
+}
+
+/* Animasyonlar */
+@keyframes fadeInZoom {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes glowText {
+  from {
+    text-shadow: 0 0 10px #ff7eb3;
+  }
+  to {
+    text-shadow: 0 0 30px #ff758c;
+  }
+}

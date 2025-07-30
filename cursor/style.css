@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background-size: 300% 300%;
+  animation: bgMove 8s ease infinite;
+  font-family: 'Arial', sans-serif;
+}
+
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 18px 45px;
+  font-size: 1.4rem;
+  color: #fff;
+  background: linear-gradient(135deg, #00ffcc, #00bfff);
+  border: none;
+  border-radius: 35px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00f5ff, 0 0 30px #00ffd5, 0 0 45px #00f5ff;
+  transition: transform 0.3s ease, left 0.4s ease, top 0.4s ease;
+  animation: neonPulse 1.5s infinite alternate;
+}
+
+@keyframes neonPulse {
+  from { box-shadow: 0 0 10px #00f5ff, 0 0 20px #00ffd5, 0 0 30px #00f5ff; }
+  to { box-shadow: 0 0 20px #00f5ff, 0 0 40px #00ffd5, 0 0 60px #00f5ff; }
+}
+
+button:active {
+  transform: translate(-50%, -50%) scale(0.95);
+}
+
+button.slide {
+  transition: left 0.1s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+              top 0.1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@media (max-width: 600px) {
+  button {
+    padding: 14px 30px;
+    font-size: 1.1rem;
+  }
+}

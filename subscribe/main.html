@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subscribe - Premium Form</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+  <body>
+    <div class="background-animation"></div>
+
+    <div class="container" id="subscribeContainer">
+      <form class="subscribe-form">
+        <h1>✨ Subscribe to Our Newsletter</h1>
+        <p>Learn with code, shine with design!</p>
+
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email Address" required />
+        <input type="tel" placeholder="Phone Number (optional)" />
+
+        <div class="checkbox-wrapper">
+          <input type="checkbox" id="kvkk" required />
+          <label for="kvkk">I have read and accept the privacy policy</label>
+        </div>
+
+        <button class="subscribe-btn" type="submit">📩 Subscribe</button>
+      </form>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const container = document.getElementById("subscribeContainer");
+        container.classList.add("animate");
+      });
+    </script>
+  </body>
+</html>
